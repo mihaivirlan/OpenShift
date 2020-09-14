@@ -1,0 +1,19 @@
+- From browser acces and loging in openshift web console -> Create a new Project named -> My Project 
+- From shell run:
+    - cd /home/mihail/Downloads/minishift-1.34.2-linux-amd64
+    - sudo cp ~/.minishift/cache/oc/v3.11.0/linux/oc /usr/local/bin
+    - oc version
+    - oc login -u system:admin
+    - Now you can see what you're logged in the openshift cluster used cli
+
+    - Working with REST API
+    - Should be have open twa shells
+
+    - In first shell run
+        - cd /home/mihail/Downloads/minishift-1.34.2-linux-amd64
+        - oc login -u developer -p developer
+        - oc whoami -t (and should obtain a token like: YtVng6N3XHDFacfwT4FXC19giHQY-2jV6Yb-cVNCw3Y)
+
+    - In second shell
+        - curl -k https://192.168.99.100:8443/oapi/v1/projects -H "Authorization: Bearer YtVng6N3XHDFacfwT4FXC19giHQY-2jV6Yb-cVNCw3Y"
+            - and nou can you see the detail about project, returned in JSON format
