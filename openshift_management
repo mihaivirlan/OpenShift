@@ -15,5 +15,5 @@
         - oc whoami -t (and should obtain a token like: YtVng6N3XHDFacfwT4FXC19giHQY-2jV6Yb-cVNCw3Y)
 
     - In second shell
-        - curl -k https://192.168.99.100:8443/oapi/v1/projects -H "Authorization: Bearer YtVng6N3XHDFacfwT4FXC19giHQY-2jV6Yb-cVNCw3Y"
+        - curl -k https://your_ip:8443/oapi/v1/projects -H "Authorization: Bearer YtVng6N3XHDFacfwT4FXC19giHQY-2jV6Yb-cVNCw3Y"
             - and nou can you see the detail about project, returned in JSON format

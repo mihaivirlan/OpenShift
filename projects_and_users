@@ -1,0 +1,26 @@
+- OpenShift concept Users Account:
+	- Regular Users - developer
+	- System Users - system:admin; system:master
+	- Service Users - system:serviceaccount:proj1:db_user
+
+- Demo Projects and Users
+	- cd /home/mihail/Downloads/minishift-1.34.2-linux-amd64 (this is my path)
+	- oc login -u system:admin
+	- oc get projects
+	- oc get users
+
+	- Go in Browser to address: https://192.168.99.100:8443/console -> 
+          Logout under system user -> login with another user -> "developer2" ->
+	  password for user developer2 should be - "anypassword" -> run again -> oc get users -> and see the new logged user
+
+	- Logout under developer2 user -> Login under developer user account -> 
+	  Create Project -> name=my-new-project -> display name=my-new-project
+	
+	- oc get projects
+
+	- Login to a new user named=administrator -> with password=your_choice
+
+	- oc get users
+	- oc adm policy add-cluster-role-to-user cluster-admin administrator
+
+	- Now, look into the web console -> https://192.168.99.100:8443/console -> should be see all of the projects
